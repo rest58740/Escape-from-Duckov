@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B3FDCCC-55DD-4469-99F5-20946F52DCAC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KINEMATION.KAnimationCore.Runtime</RootNamespace>
+    <AssemblyName>KAnimationCore.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\為上傳DLL\System.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\CurveSelectorAttribute.cs" />
+    <Compile Include="Attributes\ElementChainSelectorAttribute.cs" />
+    <Compile Include="Attributes\InputProperty.cs" />
+    <Compile Include="Attributes\KAttributes.cs" />
+    <Compile Include="Attributes\ReadOnlyAttribute.cs" />
+    <Compile Include="Attributes\RigAssetSelectorAttribute.cs" />
+    <Compile Include="Attributes\TabAttribute.cs" />
+    <Compile Include="Attributes\UnfoldAttribute.cs" />
+    <Compile Include="Core\ChainIKData.cs" />
+    <Compile Include="Core\EaseMode.cs" />
+    <Compile Include="Core\EEaseFunc.cs" />
+    <Compile Include="Core\FloatSpringState.cs" />
+    <Compile Include="Core\KAnimationMath.cs" />
+    <Compile Include="Core\KChainIK.cs" />
+    <Compile Include="Core\KCurves.cs" />
+    <Compile Include="Core\KMath.cs" />
+    <Compile Include="Core\KSpringMath.cs" />
+    <Compile Include="Core\KTransform.cs" />
+    <Compile Include="Core\KTwoBoneIK.cs" />
+    <Compile Include="Core\KTwoBoneIkData.cs" />
+    <Compile Include="Core\KTwoBoneIKJob.cs" />
+    <Compile Include="Core\ModifyCurve.cs" />
+    <Compile Include="Core\VectorCurve.cs" />
+    <Compile Include="Input\BoolProperty.cs" />
+    <Compile Include="Input\FloatProperty.cs" />
+    <Compile Include="Input\IntProperty.cs" />
+    <Compile Include="Input\IUserInputController.cs" />
+    <Compile Include="Input\UserInputConfig.cs" />
+    <Compile Include="Input\UserInputController.cs" />
+    <Compile Include="Input\VectorProperty.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rig\EModifyMode.cs" />
+    <Compile Include="Rig\ESpaceType.cs" />
+    <Compile Include="Rig\IRigObserver.cs" />
+    <Compile Include="Rig\IRigUser.cs" />
+    <Compile Include="Rig\KPose.cs" />
+    <Compile Include="Rig\KRig.cs" />
+    <Compile Include="Rig\KRigComponent.cs" />
+    <Compile Include="Rig\KRigElement.cs" />
+    <Compile Include="Rig\KRigElementChain.cs" />
+    <Compile Include="Rig\KTransformChain.cs" />
+    <Compile Include="Rig\KVirtualElement.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
