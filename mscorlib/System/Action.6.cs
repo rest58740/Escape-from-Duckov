@@ -1,0 +1,8 @@
+﻿using System;
+
+namespace System
+{
+	// Token: 0x020000E1 RID: 225
+	// (Invoke) Token: 0x060006A7 RID: 1703
+	public delegate void Action<in T1, in T2, in T3, in T4, in T5>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
+}
