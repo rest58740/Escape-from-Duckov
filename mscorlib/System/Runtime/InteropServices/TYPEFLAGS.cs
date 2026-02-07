@@ -1,0 +1,42 @@
+﻿using System;
+
+namespace System.Runtime.InteropServices
+{
+	// Token: 0x02000722 RID: 1826
+	[Flags]
+	[Obsolete("Use System.Runtime.InteropServices.ComTypes.TYPEFLAGS instead. http://go.microsoft.com/fwlink/?linkid=14202", false)]
+	[Serializable]
+	public enum TYPEFLAGS : short
+	{
+		// Token: 0x04002B18 RID: 11032
+		TYPEFLAG_FAPPOBJECT = 1,
+		// Token: 0x04002B19 RID: 11033
+		TYPEFLAG_FCANCREATE = 2,
+		// Token: 0x04002B1A RID: 11034
+		TYPEFLAG_FLICENSED = 4,
+		// Token: 0x04002B1B RID: 11035
+		TYPEFLAG_FPREDECLID = 8,
+		// Token: 0x04002B1C RID: 11036
+		TYPEFLAG_FHIDDEN = 16,
+		// Token: 0x04002B1D RID: 11037
+		TYPEFLAG_FCONTROL = 32,
+		// Token: 0x04002B1E RID: 11038
+		TYPEFLAG_FDUAL = 64,
+		// Token: 0x04002B1F RID: 11039
+		TYPEFLAG_FNONEXTENSIBLE = 128,
+		// Token: 0x04002B20 RID: 11040
+		TYPEFLAG_FOLEAUTOMATION = 256,
+		// Token: 0x04002B21 RID: 11041
+		TYPEFLAG_FRESTRICTED = 512,
+		// Token: 0x04002B22 RID: 11042
+		TYPEFLAG_FAGGREGATABLE = 1024,
+		// Token: 0x04002B23 RID: 11043
+		TYPEFLAG_FREPLACEABLE = 2048,
+		// Token: 0x04002B24 RID: 11044
+		TYPEFLAG_FDISPATCHABLE = 4096,
+		// Token: 0x04002B25 RID: 11045
+		TYPEFLAG_FREVERSEBIND = 8192,
+		// Token: 0x04002B26 RID: 11046
+		TYPEFLAG_FPROXY = 16384
+	}
+}

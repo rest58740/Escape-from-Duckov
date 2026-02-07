@@ -1,0 +1,29 @@
+﻿using System;
+
+namespace System.Runtime.InteropServices
+{
+	// Token: 0x020006EC RID: 1772
+	[ComVisible(true)]
+	[AttributeUsage(AttributeTargets.Interface, Inherited = false)]
+	public sealed class TypeLibImportClassAttribute : Attribute
+	{
+		// Token: 0x0600406E RID: 16494 RVA: 0x000E0FD6 File Offset: 0x000DF1D6
+		public TypeLibImportClassAttribute(Type importClass)
+		{
+			this._importClassName = importClass.ToString();
+		}
+
+		// Token: 0x170009D0 RID: 2512
+		// (get) Token: 0x0600406F RID: 16495 RVA: 0x000E0FEA File Offset: 0x000DF1EA
+		public string Value
+		{
+			get
+			{
+				return this._importClassName;
+			}
+		}
+
+		// Token: 0x04002A3B RID: 10811
+		internal string _importClassName;
+	}
+}
