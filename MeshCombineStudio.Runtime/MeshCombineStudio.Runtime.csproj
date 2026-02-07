@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0D5E7D1-123D-4C7A-9FB4-D0ADAB97BD5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MeshCombineStudio</RootNamespace>
+    <AssemblyName>MeshCombineStudio.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MeshExtension">
+      <HintPath>..\..\為上傳DLL\MeshExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\為上傳DLL\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\為上傳DLL\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AABB3.cs" />
+    <Compile Include="BaseOctree.cs" />
+    <Compile Include="CachedComponents.cs" />
+    <Compile Include="CachedGameObject.cs" />
+    <Compile Include="CachedLodGameObject.cs" />
+    <Compile Include="CamGeometryCapture.cs" />
+    <Compile Include="CombineCondition.cs" />
+    <Compile Include="CombineConditionSettings.cs" />
+    <Compile Include="CombinedLODManager.cs" />
+    <Compile Include="CombineMode.cs" />
+    <Compile Include="CombineRuntime.cs" />
+    <Compile Include="Console.cs" />
+    <Compile Include="CustomHideFlags.cs" />
+    <Compile Include="DirectDraw.cs" />
+    <Compile Include="DisabledLODGroup.cs" />
+    <Compile Include="DisabledLodMeshRender.cs" />
+    <Compile Include="DisabledMeshRenderer.cs" />
+    <Compile Include="EnableChildrenMeshRenderers.cs" />
+    <Compile Include="FastIndex.cs" />
+    <Compile Include="FastIndexList.cs" />
+    <Compile Include="FastList.cs" />
+    <Compile Include="FastListBase.2.cs" />
+    <Compile Include="FastListBase.cs" />
+    <Compile Include="FindLodGroups.cs" />
+    <Compile Include="FoundCombineConditions.cs" />
+    <Compile Include="GameObjectLayer.cs" />
+    <Compile Include="GarbageCollectMesh.cs" />
+    <Compile Include="IFastIndex.cs" />
+    <Compile Include="IFastIndexList.cs" />
+    <Compile Include="Int2.cs" />
+    <Compile Include="Int3.cs" />
+    <Compile Include="LightmapSettings.cs" />
+    <Compile Include="ListMeshVertCount.cs" />
+    <Compile Include="LODGroupSetup.cs" />
+    <Compile Include="Mathw.cs" />
+    <Compile Include="MCSDynamicObject.cs" />
+    <Compile Include="MCS_CameraController.cs" />
+    <Compile Include="MCS_FPSCounter.cs" />
+    <Compile Include="MCS_RemoveOverlappingTris.cs" />
+    <Compile Include="MCS_RemoveTris.cs" />
+    <Compile Include="MCS_RemoveTrisBelowSurface.cs" />
+    <Compile Include="MeshCache.cs" />
+    <Compile Include="MeshColliderAdd.cs" />
+    <Compile Include="MeshCombineJobManager.cs" />
+    <Compile Include="MeshCombiner.cs" />
+    <Compile Include="MeshCombinerData.cs" />
+    <Compile Include="MeshExtensionAlloc.cs" />
+    <Compile Include="MeshFilterRevert.cs" />
+    <Compile Include="MeshObject.cs" />
+    <Compile Include="MeshObjectsHolder.cs" />
+    <Compile Include="Methods.cs" />
+    <Compile Include="MonoBehaviourFastIndex.cs" />
+    <Compile Include="NavigationCamera.cs" />
+    <Compile Include="ObjectHolder.cs" />
+    <Compile Include="ObjectOctree.cs" />
+    <Compile Include="ObjectSpawner.cs" />
+    <Compile Include="Parent.cs" />
+    <Compile Include="ParentFastHashListIndex.cs" />
+    <Compile Include="ParentMono.cs" />
+    <Compile Include="ParentMonoHash.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaycastTest.cs" />
+    <Compile Include="ReadMe.cs" />
+    <Compile Include="RemoveGeometryBelowTerrain.cs" />
+    <Compile Include="RootSceneCombiner.cs" />
+    <Compile Include="Sector3D.cs" />
+    <Compile Include="SectorGrid3D.cs" />
+    <Compile Include="SelectOriginal.cs" />
+    <Compile Include="ShadowDistance.cs" />
+    <Compile Include="SimpleMove.cs" />
+    <Compile Include="SortedFastList.cs" />
+    <Compile Include="SO_NavigationCamera.cs" />
+    <Compile Include="Sphere3.cs" />
+    <Compile Include="StreamedSceneCombiner.cs" />
+    <Compile Include="SwapCombineKey.cs" />
+    <Compile Include="SwitchMeshCombineManager.cs" />
+    <Compile Include="Triangle3.cs" />
+    <Compile Include="TriangleAAB3.cs" />
+    <Compile Include="TriangleTest.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="VisualizeMesh.cs" />
+    <Compile Include="Voxelize.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
