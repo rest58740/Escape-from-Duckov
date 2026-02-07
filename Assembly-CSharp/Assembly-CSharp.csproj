@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5022C056-D24E-46CF-AAAB-B5DF136F58E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Assembly-CSharp</RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cinemachine">
+      <HintPath>..\..\為上傳DLL\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="ECM2">
+      <HintPath>..\..\為上傳DLL\ECM2.dll</HintPath>
+    </Reference>
+    <Reference Include="FOW">
+      <HintPath>..\..\為上傳DLL\FOW.dll</HintPath>
+    </Reference>
+    <Reference Include="KAnimationCore.Runtime">
+      <HintPath>..\..\為上傳DLL\KAnimationCore.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\為上傳DLL\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\為上傳DLL\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UISplineRenderer">
+      <HintPath>..\..\為上傳DLL\UISplineRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\為上傳DLL\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>..\..\為上傳DLL\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines">
+      <HintPath>..\..\為上傳DLL\Unity.Splines.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\為上傳DLL\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Demo.cs" />
+    <Compile Include="ECM2\Examples\CharacterInput.cs" />
+    <Compile Include="ECM2\Examples\CharacterPause.cs" />
+    <Compile Include="ECM2\Examples\FirstPersonFly\CharacterInput.cs" />
+    <Compile Include="ECM2\Examples\FirstPersonFly\FlyAbility.cs" />
+    <Compile Include="ECM2\Examples\FirstPersonSwim\CharacterInput.cs" />
+    <Compile Include="ECM2\Examples\FirstPerson\FirstPersonCharacter.cs" />
+    <Compile Include="ECM2\Examples\FirstPerson\FirstPersonCharacterInput.cs" />
+    <Compile Include="ECM2\Examples\FirstPerson\FirstPersonCharacterLookInput.cs" />
+    <Compile Include="ECM2\Examples\Glide\GlideAbility.cs" />
+    <Compile Include="ECM2\Examples\Glide\PlayerController.cs" />
+    <Compile Include="ECM2\Examples\Jump\CharacterInput.cs" />
+    <Compile Include="ECM2\Examples\Jump\JumpAbility.cs" />
+    <Compile Include="ECM2\Examples\Ladders\CharacterInput.cs" />
+    <Compile Include="ECM2\Examples\Ladders\Ladder.cs" />
+    <Compile Include="ECM2\Examples\Ladders\LadderClimbAbility.cs" />
+    <Compile Include="ECM2\Examples\OrientToGround\CharacterOrientToGround.cs" />
+    <Compile Include="ECM2\Examples\PlanetWalk\PlayerCharacter.cs" />
+    <Compile Include="ECM2\Examples\PlanetWalk\ThirdPersonController.cs" />
+    <Compile Include="ECM2\Examples\SideScrolling\SideScrollingCharacter.cs" />
+    <Compile Include="ECM2\Examples\SimpleCameraController.cs" />
+    <Compile Include="ECM2\Examples\Slide\PlayerCharacter.cs" />
+    <Compile Include="ECM2\Examples\SlopeSpeedModifier\MyCharacter.cs" />
+    <Compile Include="ECM2\Examples\Teleport\Teleporter.cs" />
+    <Compile Include="ECM2\Examples\ThirdPerson\ThirdPersonController.cs" />
+    <Compile Include="ECM2\Examples\ToggleGravityDirection\ToggleCharacterGravityDirection.cs" />
+    <Compile Include="ECM2\Examples\TwinStickMovement\TwinStickCharacter.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex21\PlayerCharacter.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex22\PlayerController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex31\AnimationController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex31\PlayerController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex33\RootMotionToggle.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex41\SprintableCharacter.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex42\PlayerController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex42\SprintAbility.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex43\DashingCharacter.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex43\PlayerController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex51\PlayerCharacter.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex52\PlayerController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex61\Bouncer.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex61\ForceZone.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex62\ApplyLandingForce.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex71\KinematicMove.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex71\KinematicRotate.cs" />
+    <Compile Include="ECM2\Walkthrough\EX74\OneWayPlatform.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex7\PlayerController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex81\ClickToMove.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex91\FirstPersonController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex92\AnimationController.cs" />
+    <Compile Include="ECM2\Walkthrough\Ex92\ThirdPersonController.cs" />
+    <Compile Include="EditorPrefsStrings.cs" />
+    <Compile Include="FOW\Demos\BlinkingRevealer.cs" />
+    <Compile Include="FOW\Demos\FowCharacterDemo.cs" />
+    <Compile Include="FOW\Demos\TeamsDemo.cs" />
+    <Compile Include="HardSlashes\DemoManager.cs" />
+    <Compile Include="HardSlashes\SelfDestruct.cs" />
+    <Compile Include="JoshH\Extensions\Vector2Extension.cs" />
+    <Compile Include="JoshH\UI\UIGradient.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\AtomPose.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\BlendStreamAtom.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\LayeredBlend.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\LayeringJob.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\MagicBlendAsset.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\MagicBlending.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\MagicBlendLibrary.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\MagicBlendState.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\OverlayJob.cs" />
+    <Compile Include="KINEMATION\MagicBlend\Runtime\PoseJob.cs" />
+    <Compile Include="PreviewTerrainCreater.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Readme.cs" />
+    <Compile Include="RotateOnScroll.cs" />
+    <Compile Include="UI_Spline_Renderer\Example\DraggableSplinePointExample.cs" />
+    <Compile Include="UI_Spline_Renderer\Example\DragPortExample.cs" />
+    <Compile Include="UI_Spline_Renderer\Example\UISplineRendererExample.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="VLB\AttenuationEquation.cs" />
+    <Compile Include="VLB\AttenuationEquationHD.cs" />
+    <Compile Include="VLB\BatchingHelper.cs" />
+    <Compile Include="VLB\BeamGeometryAbstractBase.cs" />
+    <Compile Include="VLB\BeamGeometryHD.cs" />
+    <Compile Include="VLB\BeamGeometrySD.cs" />
+    <Compile Include="VLB\BeamProps.cs" />
+    <Compile Include="VLB\BlendingMode.cs" />
+    <Compile Include="VLB\ColorMode.cs" />
+    <Compile Include="VLB\Config.cs" />
+    <Compile Include="VLB\Consts.cs" />
+    <Compile Include="VLB\CookieChannel.cs" />
+    <Compile Include="VLB\Dimensions.cs" />
+    <Compile Include="VLB\DirtyProps.cs" />
+    <Compile Include="VLB\DummyMaterial.cs" />
+    <Compile Include="VLB\DynamicOcclusionAbstractBase.cs" />
+    <Compile Include="VLB\DynamicOcclusionDepthBuffer.cs" />
+    <Compile Include="VLB\DynamicOcclusionRaycasting.cs" />
+    <Compile Include="VLB\DynamicOcclusionUpdateRate.cs" />
+    <Compile Include="VLB\EffectAbstractBase.cs" />
+    <Compile Include="VLB\EffectFlicker.cs" />
+    <Compile Include="VLB\EffectFromProfile.cs" />
+    <Compile Include="VLB\EffectPulse.cs" />
+    <Compile Include="VLB\FeatureEnabledColorGradient.cs" />
+    <Compile Include="VLB\GlobalMeshHD.cs" />
+    <Compile Include="VLB\GlobalMeshSD.cs" />
+    <Compile Include="VLB\HighlightNullAttribute.cs" />
+    <Compile Include="VLB\LODBeamGroup.cs" />
+    <Compile Include="VLB\MaterialManager.cs" />
+    <Compile Include="VLB\MaterialModifier.cs" />
+    <Compile Include="VLB\MeshGenerator.cs" />
+    <Compile Include="VLB\MeshType.cs" />
+    <Compile Include="VLB\MinMaxRangeAttribute.cs" />
+    <Compile Include="VLB\MinMaxRangeFloat.cs" />
+    <Compile Include="VLB\Noise3D.cs" />
+    <Compile Include="VLB\NoiseMode.cs" />
+    <Compile Include="VLB\ParticlesDirection.cs" />
+    <Compile Include="VLB\PlaneAlignment.cs" />
+    <Compile Include="VLB\PlatformHelper.cs" />
+    <Compile Include="VLB\PolygonHelper.cs" />
+    <Compile Include="VLB\RaymarchingQuality.cs" />
+    <Compile Include="VLB\RenderingMode.cs" />
+    <Compile Include="VLB\RenderPipeline.cs" />
+    <Compile Include="VLB\RenderQueue.cs" />
+    <Compile Include="VLB\ShaderAccuracy.cs" />
+    <Compile Include="VLB\ShaderKeywords.cs" />
+    <Compile Include="VLB\ShaderMode.cs" />
+    <Compile Include="VLB\ShaderProperties.cs" />
+    <Compile Include="VLB\ShadowUpdateRate.cs" />
+    <Compile Include="VLB\SkewingHandleSD.cs" />
+    <Compile Include="VLB\SpotLightHelper.cs" />
+    <Compile Include="VLB\SRPHelper.cs" />
+    <Compile Include="VLB\TrackRealtimeChangesOnLightHD.cs" />
+    <Compile Include="VLB\TransformUtils.cs" />
+    <Compile Include="VLB\TriggerZone.cs" />
+    <Compile Include="VLB\Utils.cs" />
+    <Compile Include="VLB\UtilsBeamProps.cs" />
+    <Compile Include="VLB\Version.cs" />
+    <Compile Include="VLB\VolumetricCookieHD.cs" />
+    <Compile Include="VLB\VolumetricDustParticles.cs" />
+    <Compile Include="VLB\VolumetricLightBeamAbstractBase.cs" />
+    <Compile Include="VLB\VolumetricLightBeamHD.cs" />
+    <Compile Include="VLB\VolumetricLightBeamHD2D.cs" />
+    <Compile Include="VLB\VolumetricLightBeamSD.cs" />
+    <Compile Include="VLB\VolumetricShadowHD.cs" />
+    <Compile Include="VLB_Samples\CameraToggleBeamVisibility.cs" />
+    <Compile Include="VLB_Samples\CheckIfInsideBeam.cs" />
+    <Compile Include="VLB_Samples\FeaturesNotSupportedMessage.cs" />
+    <Compile Include="VLB_Samples\FreeCameraController.cs" />
+    <Compile Include="VLB_Samples\LightGenerator.cs" />
+    <Compile Include="VLB_Samples\Rotater.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
