@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98788111-9047-4411-A59A-947E2751BC83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AstarPathfindingProject</RootNamespace>
+    <AssemblyName>AstarPathfindingProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="andywiecko.BurstTriangulator" />
+    <Reference Include="Clipper2Lib">
+      <HintPath>..\..\為上傳DLL\Clipper2Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Drawing">
+      <HintPath>..\..\為上傳DLL\Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\為上傳DLL\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="PackageTools">
+      <HintPath>..\..\為上傳DLL\PackageTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>..\..\為上傳DLL\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\為上傳DLL\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\為上傳DLL\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\為上傳DLL\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>..\..\為上傳DLL\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\為上傳DLL\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$BurstDirectCallInitializer.cs" />
+    <Compile Include="AstarPath.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Pathfinding\ABPath.cs" />
+    <Compile Include="Pathfinding\ABPathEndingCondition.cs" />
+    <Compile Include="Pathfinding\AdvancedSmooth.cs" />
+    <Compile Include="Pathfinding\AIBase.cs" />
+    <Compile Include="Pathfinding\AIDestinationSetter.cs" />
+    <Compile Include="Pathfinding\AILerp.cs" />
+    <Compile Include="Pathfinding\AIPath.cs" />
+    <Compile Include="Pathfinding\AIPathAlignedToSurface.cs" />
+    <Compile Include="Pathfinding\AlternativePath.cs" />
+    <Compile Include="Pathfinding\AnimationLink.cs" />
+    <Compile Include="Pathfinding\AstarColor.cs" />
+    <Compile Include="Pathfinding\AstarData.cs" />
+    <Compile Include="Pathfinding\AstarDebugger.cs" />
+    <Compile Include="Pathfinding\AstarMath.cs" />
+    <Compile Include="Pathfinding\AstarSplines.cs" />
+    <Compile Include="Pathfinding\AstarWorkItem.cs" />
+    <Compile Include="Pathfinding\AutoRepathPolicy.cs" />
+    <Compile Include="Pathfinding\BinaryHeap.cs" />
+    <Compile Include="Pathfinding\BlockManager.cs" />
+    <Compile Include="Pathfinding\CloseToDestinationMode.cs" />
+    <Compile Include="Pathfinding\Collections\AABBTree.cs" />
+    <Compile Include="Pathfinding\Collections\BBTree.cs" />
+    <Compile Include="Pathfinding\Collections\CircularBuffer.cs" />
+    <Compile Include="Pathfinding\Collections\GridLookup.cs" />
+    <Compile Include="Pathfinding\Collections\HierarchicalBitset.cs" />
+    <Compile Include="Pathfinding\Collections\NativeCircularBuffer.cs" />
+    <Compile Include="Pathfinding\Collections\SlabAllocator.cs" />
+    <Compile Include="Pathfinding\Collections\SlabListExtensions.cs" />
+    <Compile Include="Pathfinding\Collections\SpanExtensions.cs" />
+    <Compile Include="Pathfinding\Collections\UnsafeSpan.cs" />
+    <Compile Include="Pathfinding\Connection.cs" />
+    <Compile Include="Pathfinding\ConstantPath.cs" />
+    <Compile Include="Pathfinding\DefaultITraversalProvider.cs" />
+    <Compile Include="Pathfinding\DistanceMetric.cs" />
+    <Compile Include="Pathfinding\DynamicGridObstacle.cs" />
+    <Compile Include="Pathfinding\DynamicObstacle.cs" />
+    <Compile Include="Pathfinding\ECS\RVO\AgentIndex.cs" />
+    <Compile Include="Pathfinding\EndingConditionDistance.cs" />
+    <Compile Include="Pathfinding\EndingConditionProximity.cs" />
+    <Compile Include="Pathfinding\Examples\AnimationLinkTraverser.cs" />
+    <Compile Include="Pathfinding\Examples\LocalSpaceRichAI.cs" />
+    <Compile Include="Pathfinding\Examples\TurnBasedAI.cs" />
+    <Compile Include="Pathfinding\FakeTransform.cs" />
+    <Compile Include="Pathfinding\FleePath.cs" />
+    <Compile Include="Pathfinding\FloodPath.cs" />
+    <Compile Include="Pathfinding\FloodPathConstraint.cs" />
+    <Compile Include="Pathfinding\FloodPathTracer.cs" />
+    <Compile Include="Pathfinding\FollowerEntity.cs" />
+    <Compile Include="Pathfinding\Funnel.cs" />
+    <Compile Include="Pathfinding\FunnelModifier.cs" />
+    <Compile Include="Pathfinding\GlobalNodeStorage.cs" />
+    <Compile Include="Pathfinding\GraphDebugMode.cs" />
+    <Compile Include="Pathfinding\GraphEditorBase.cs" />
+    <Compile Include="Pathfinding\GraphHitInfo.cs" />
+    <Compile Include="Pathfinding\GraphMask.cs" />
+    <Compile Include="Pathfinding\GraphModifier.cs" />
+    <Compile Include="Pathfinding\GraphNode.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\ColliderType.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\FlatGridAdjacencyMapper.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\GraphCollision.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\GridAdjacencyMapper.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\GridGraphNodeData.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\GridGraphScanData.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\GridIterationUtilities.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobAllocateNodes.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobCalculateGridConnections.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobCheckCollisions.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobColliderHitsToBooleans.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobCopyBuffers.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobErosion.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobFilterDiagonalConnections.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobMergeRaycastCollisionHits.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobNodeGridLayout.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobNodeWalkability.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobPrepareCapsuleCommands.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobPrepareGridRaycast.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobPrepareGridRaycastThick.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobPrepareRaycasts.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobPrepareSphereCommands.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobReadNodeData.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobRelocateNodes.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Jobs\JobWriteNodeData.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\LayeredGridAdjacencyMapper.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\RayDirection.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Rules\CustomGridGraphRuleEditorAttribute.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Rules\GridGraphRule.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Rules\GridGraphRules.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Rules\RuleAnglePenalty.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Rules\RuleElevationPenalty.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Rules\RulePerLayerModifications.cs" />
+    <Compile Include="Pathfinding\Graphs\Grid\Rules\RuleTexture.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\CircleGeometryUtilities.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\ColliderMeshBuilder2D.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobBuildNodes.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobBuildTileMeshFromVertices.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobBuildTileMeshFromVoxels.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobCalculateTriangleConnections.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobConnectTiles.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobConnectTilesSingle.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobConvertAreasToTags.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobCreateTiles.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobTransformTileCoordinates.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\JobWriteNodeConnections.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Jobs\TileBuilderBurst.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\NavmeshTile.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\NavmeshUpdates.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\RecastBuilder.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\RecastMeshGatherer.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\RelevantGraphSurface.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\TileBuilder.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\TileCutter.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\TileHandler.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\TileHandlerCache.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\TileLayout.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\TileMesh.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\TileMeshes.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\TileMeshesUnsafe.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\CellMinMax.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\CompactVoxelCell.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\CompactVoxelField.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\CompactVoxelSpan.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobBuildCompactField.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobBuildConnections.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobBuildContours.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobBuildDistanceField.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobBuildMesh.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobBuildRegions.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobErodeWalkableArea.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobFilterLedges.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobFilterLowHeightSpans.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\JobVoxelize.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\LinkedVoxelField.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\LinkedVoxelSpan.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\RasterizationMesh.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\VoxelContour.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\VoxelMesh.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Burst\VoxelUtilityBurst.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\Int3PolygonClipper.cs" />
+    <Compile Include="Pathfinding\Graphs\Navmesh\Voxelization\VoxelPolygonClipper.cs" />
+    <Compile Include="Pathfinding\Graphs\Util\EuclideanEmbedding.cs" />
+    <Compile Include="Pathfinding\Graphs\Util\HeuristicOptimizationMode.cs" />
+    <Compile Include="Pathfinding\GraphUpdateObject.cs" />
+    <Compile Include="Pathfinding\GraphUpdateProcessor.cs" />
+    <Compile Include="Pathfinding\GraphUpdateScene.cs" />
+    <Compile Include="Pathfinding\GraphUpdateShape.cs" />
+    <Compile Include="Pathfinding\GraphUpdateStage.cs" />
+    <Compile Include="Pathfinding\GraphUpdateThreading.cs" />
+    <Compile Include="Pathfinding\GraphUpdateUtilities.cs" />
+    <Compile Include="Pathfinding\GraphUtilities.cs" />
+    <Compile Include="Pathfinding\GridGraph.cs" />
+    <Compile Include="Pathfinding\GridHitInfo.cs" />
+    <Compile Include="Pathfinding\GridNode.cs" />
+    <Compile Include="Pathfinding\GridNodeBase.cs" />
+    <Compile Include="Pathfinding\GridStringPulling.cs" />
+    <Compile Include="Pathfinding\Heuristic.cs" />
+    <Compile Include="Pathfinding\HeuristicObjective.cs" />
+    <Compile Include="Pathfinding\HierarchicalGraph.cs" />
+    <Compile Include="Pathfinding\IAstarAI.cs" />
+    <Compile Include="Pathfinding\IGraphInternals.cs" />
+    <Compile Include="Pathfinding\IGraphUpdateContext.cs" />
+    <Compile Include="Pathfinding\IGraphUpdatePromise.cs" />
+    <Compile Include="Pathfinding\INavmeshHolder.cs" />
+    <Compile Include="Pathfinding\InspectorGridHexagonNodeSize.cs" />
+    <Compile Include="Pathfinding\InspectorGridMode.cs" />
+    <Compile Include="Pathfinding\Int3.cs" />
+    <Compile Include="Pathfinding\IntBounds.cs" />
+    <Compile Include="Pathfinding\IntRect.cs" />
+    <Compile Include="Pathfinding\IOffMeshLinkHandler.cs" />
+    <Compile Include="Pathfinding\IOffMeshLinkStateMachine.cs" />
+    <Compile Include="Pathfinding\IPathInternals.cs" />
+    <Compile Include="Pathfinding\IPathModifier.cs" />
+    <Compile Include="Pathfinding\IRaycastableGraph.cs" />
+    <Compile Include="Pathfinding\ITransformedGraph.cs" />
+    <Compile Include="Pathfinding\ITraversalProvider.cs" />
+    <Compile Include="Pathfinding\IUpdatableGraph.cs" />
+    <Compile Include="Pathfinding\IWorkItemContext.cs" />
+    <Compile Include="Pathfinding\Jobs\DisableUninitializedReadCheckAttribute.cs" />
+    <Compile Include="Pathfinding\Jobs\DisposeArena.cs" />
+    <Compile Include="Pathfinding\Jobs\IArenaDisposable.cs" />
+    <Compile Include="Pathfinding\Jobs\IJobExtensions.cs" />
+    <Compile Include="Pathfinding\Jobs\IJobParallelForBatched.cs" />
+    <Compile Include="Pathfinding\Jobs\IJobTimeSliced.cs" />
+    <Compile Include="Pathfinding\Jobs\IndexActionJob.cs" />
+    <Compile Include="Pathfinding\Jobs\JobAND.cs" />
+    <Compile Include="Pathfinding\Jobs\JobClampHitToRay.cs" />
+    <Compile Include="Pathfinding\Jobs\JobCopy.cs" />
+    <Compile Include="Pathfinding\Jobs\JobCopyHits.cs" />
+    <Compile Include="Pathfinding\Jobs\JobCopyRectangle.cs" />
+    <Compile Include="Pathfinding\Jobs\JobDependencyAnalyzer.cs" />
+    <Compile Include="Pathfinding\Jobs\JobDependencyAnalyzerAssociated.cs" />
+    <Compile Include="Pathfinding\Jobs\JobDependencyTracker.cs" />
+    <Compile Include="Pathfinding\Jobs\JobHandleWithMainThreadWork.cs" />
+    <Compile Include="Pathfinding\Jobs\JobMaxHitCount.cs" />
+    <Compile Include="Pathfinding\Jobs\JobMemSet.cs" />
+    <Compile Include="Pathfinding\Jobs\JobParallelForBatchedExtensions.cs" />
+    <Compile Include="Pathfinding\Jobs\JobRaycastAll.cs" />
+    <Compile Include="Pathfinding\Jobs\JobRotate3DArray.cs" />
+    <Compile Include="Pathfinding\Jobs\LinearDependencies.cs" />
+    <Compile Include="Pathfinding\Jobs\NativeArrayExtensions.cs" />
+    <Compile Include="Pathfinding\Jobs\Slice3D.cs" />
+    <Compile Include="Pathfinding\Jobs\SliceActionJob.cs" />
+    <Compile Include="Pathfinding\Jobs\TimeSlice.cs" />
+    <Compile Include="Pathfinding\LayerGridGraph.cs" />
+    <Compile Include="Pathfinding\LevelGridNode.cs" />
+    <Compile Include="Pathfinding\LinkGraph.cs" />
+    <Compile Include="Pathfinding\LinkNode.cs" />
+    <Compile Include="Pathfinding\LocalSpaceGraph.cs" />
+    <Compile Include="Pathfinding\MeshNode.cs" />
+    <Compile Include="Pathfinding\MonoModifier.cs" />
+    <Compile Include="Pathfinding\MoveInCircle.cs" />
+    <Compile Include="Pathfinding\MultiTargetPath.cs" />
+    <Compile Include="Pathfinding\NavGraph.cs" />
+    <Compile Include="Pathfinding\NavmeshAdd.cs" />
+    <Compile Include="Pathfinding\NavmeshBase.cs" />
+    <Compile Include="Pathfinding\NavmeshClipper.cs" />
+    <Compile Include="Pathfinding\NavmeshCut.cs" />
+    <Compile Include="Pathfinding\NavmeshCutJobs.cs" />
+    <Compile Include="Pathfinding\NavmeshEdges.cs" />
+    <Compile Include="Pathfinding\NavMeshGraph.cs" />
+    <Compile Include="Pathfinding\NavmeshPrefab.cs" />
+    <Compile Include="Pathfinding\NNConstraint.cs" />
+    <Compile Include="Pathfinding\NNConstraintWithTraversalProvider.cs" />
+    <Compile Include="Pathfinding\NNInfo.cs" />
+    <Compile Include="Pathfinding\NodeLink.cs" />
+    <Compile Include="Pathfinding\NodeLink2.cs" />
+    <Compile Include="Pathfinding\NodeLink3.cs" />
+    <Compile Include="Pathfinding\NodeLink3Node.cs" />
+    <Compile Include="Pathfinding\NumNeighbours.cs" />
+    <Compile Include="Pathfinding\OffMeshLinks.cs" />
+    <Compile Include="Pathfinding\OnGraphDelegate.cs" />
+    <Compile Include="Pathfinding\OnPathDelegate.cs" />
+    <Compile Include="Pathfinding\OnScanDelegate.cs" />
+    <Compile Include="Pathfinding\OrientationMode.cs" />
+    <Compile Include="Pathfinding\Path.cs" />
+    <Compile Include="Pathfinding\PathCompleteState.cs" />
+    <Compile Include="Pathfinding\PathEndingCondition.cs" />
+    <Compile Include="Pathfinding\PathfindingTag.cs" />
+    <Compile Include="Pathfinding\PathHandler.cs" />
+    <Compile Include="Pathfinding\PathLog.cs" />
+    <Compile Include="Pathfinding\PathModifier.cs" />
+    <Compile Include="Pathfinding\PathNNConstraint.cs" />
+    <Compile Include="Pathfinding\PathNode.cs" />
+    <Compile Include="Pathfinding\PathProcessor.cs" />
+    <Compile Include="Pathfinding\PathRequestSettings.cs" />
+    <Compile Include="Pathfinding\PathReturnQueue.cs" />
+    <Compile Include="Pathfinding\PathState.cs" />
+    <Compile Include="Pathfinding\PathTracer.cs" />
+    <Compile Include="Pathfinding\PathUtilities.cs" />
+    <Compile Include="Pathfinding\Patrol.cs" />
+    <Compile Include="Pathfinding\PID\AnglePIDController.cs" />
+    <Compile Include="Pathfinding\PID\AnglePIDControlOutput2D.cs" />
+    <Compile Include="Pathfinding\PID\PIDMovement.cs" />
+    <Compile Include="Pathfinding\PointGraph.cs" />
+    <Compile Include="Pathfinding\PointKDTree.cs" />
+    <Compile Include="Pathfinding\PointNode.cs" />
+    <Compile Include="Pathfinding\Polygon.cs" />
+    <Compile Include="Pathfinding\Pooling\ArrayPool.cs" />
+    <Compile Include="Pathfinding\Pooling\IAstarPooledObject.cs" />
+    <Compile Include="Pathfinding\Pooling\ListExtensions.cs" />
+    <Compile Include="Pathfinding\Pooling\ListPool.cs" />
+    <Compile Include="Pathfinding\Pooling\ObjectPool.cs" />
+    <Compile Include="Pathfinding\Pooling\ObjectPoolSimple.cs" />
+    <Compile Include="Pathfinding\Pooling\PathPool.cs" />
+    <Compile Include="Pathfinding\Pooling\StackPool.cs" />
+    <Compile Include="Pathfinding\ProceduralGraphMover.cs" />
+    <Compile Include="Pathfinding\ProceduralGridMover.cs" />
+    <Compile Include="Pathfinding\Progress.cs" />
+    <Compile Include="Pathfinding\RadiusModifier.cs" />
+    <Compile Include="Pathfinding\RandomPath.cs" />
+    <Compile Include="Pathfinding\RaycastModifier.cs" />
+    <Compile Include="Pathfinding\RecastGraph.cs" />
+    <Compile Include="Pathfinding\RecastMeshObj.cs" />
+    <Compile Include="Pathfinding\RecastNavmeshModifier.cs" />
+    <Compile Include="Pathfinding\RichAI.cs" />
+    <Compile Include="Pathfinding\RichFunnel.cs" />
+    <Compile Include="Pathfinding\RichPath.cs" />
+    <Compile Include="Pathfinding\RichPathPart.cs" />
+    <Compile Include="Pathfinding\RichSpecial.cs" />
+    <Compile Include="Pathfinding\RVO\AgentDebugFlags.cs" />
+    <Compile Include="Pathfinding\RVO\ArbitraryMovementPlane.cs" />
+    <Compile Include="Pathfinding\RVO\IAgent.cs" />
+    <Compile Include="Pathfinding\RVO\IMovementPlaneWrapper.cs" />
+    <Compile Include="Pathfinding\RVO\JobDestinationReached.cs" />
+    <Compile Include="Pathfinding\RVO\JobHardCollisions.cs" />
+    <Compile Include="Pathfinding\RVO\JobHorizonAvoidancePhase1.cs" />
+    <Compile Include="Pathfinding\RVO\JobHorizonAvoidancePhase2.cs" />
+    <Compile Include="Pathfinding\RVO\JobRVO.cs" />
+    <Compile Include="Pathfinding\RVO\JobRVOCalculateNeighbours.cs" />
+    <Compile Include="Pathfinding\RVO\JobRVOPreprocess.cs" />
+    <Compile Include="Pathfinding\RVO\MovementPlane.cs" />
+    <Compile Include="Pathfinding\RVO\ObstacleType.cs" />
+    <Compile Include="Pathfinding\RVO\ObstacleVertexGroup.cs" />
+    <Compile Include="Pathfinding\RVO\ReachedEndOfPath.cs" />
+    <Compile Include="Pathfinding\RVO\RVOController.cs" />
+    <Compile Include="Pathfinding\RVO\RVODestinationCrowdedBehavior.cs" />
+    <Compile Include="Pathfinding\RVO\RVOLayer.cs" />
+    <Compile Include="Pathfinding\RVO\RVONavmesh.cs" />
+    <Compile Include="Pathfinding\RVO\RVOObstacle.cs" />
+    <Compile Include="Pathfinding\RVO\RVOObstacleCache.cs" />
+    <Compile Include="Pathfinding\RVO\RVOQuadtreeBurst.cs" />
+    <Compile Include="Pathfinding\RVO\RVOSimulator.cs" />
+    <Compile Include="Pathfinding\RVO\RVOSquareObstacle.cs" />
+    <Compile Include="Pathfinding\RVO\SimulatorBurst.cs" />
+    <Compile Include="Pathfinding\RVO\UnmanagedObstacle.cs" />
+    <Compile Include="Pathfinding\RVO\XYMovementPlane.cs" />
+    <Compile Include="Pathfinding\RVO\XZMovementPlane.cs" />
+    <Compile Include="Pathfinding\ScanningStage.cs" />
+    <Compile Include="Pathfinding\Seeker.cs" />
+    <Compile Include="Pathfinding\Serialization\AstarSerializer.cs" />
+    <Compile Include="Pathfinding\Serialization\GraphMeta.cs" />
+    <Compile Include="Pathfinding\Serialization\GraphSerializationContext.cs" />
+    <Compile Include="Pathfinding\Serialization\JsonDynamicTypeAliasAttribute.cs" />
+    <Compile Include="Pathfinding\Serialization\JsonDynamicTypeAttribute.cs" />
+    <Compile Include="Pathfinding\Serialization\JsonMemberAttribute.cs" />
+    <Compile Include="Pathfinding\Serialization\JsonOptInAttribute.cs" />
+    <Compile Include="Pathfinding\Serialization\SerializableAnimationCurve.cs" />
+    <Compile Include="Pathfinding\Serialization\SerializeSettings.cs" />
+    <Compile Include="Pathfinding\Serialization\TinyJsonDeserializer.cs" />
+    <Compile Include="Pathfinding\Serialization\TinyJsonSerializer.cs" />
+    <Compile Include="Pathfinding\Side.cs" />
+    <Compile Include="Pathfinding\SimpleSmoothModifier.cs" />
+    <Compile Include="Pathfinding\SingleNodeBlocker.cs" />
+    <Compile Include="Pathfinding\StartEndModifier.cs" />
+    <Compile Include="Pathfinding\Sync\BlockableChannel.cs" />
+    <Compile Include="Pathfinding\Sync\IProgress.cs" />
+    <Compile Include="Pathfinding\Sync\Promise.cs" />
+    <Compile Include="Pathfinding\Sync\RWLock.cs" />
+    <Compile Include="Pathfinding\Sync\SpinLock.cs" />
+    <Compile Include="Pathfinding\TemporaryNode.cs" />
+    <Compile Include="Pathfinding\TemporaryNodeType.cs" />
+    <Compile Include="Pathfinding\ThreadCount.cs" />
+    <Compile Include="Pathfinding\TriangleMeshNode.cs" />
+    <Compile Include="Pathfinding\UnityReferenceHelper.cs" />
+    <Compile Include="Pathfinding\Util\AssemblySearcher.cs" />
+    <Compile Include="Pathfinding\Util\BatchedEvents.cs" />
+    <Compile Include="Pathfinding\Util\Checksum.cs" />
+    <Compile Include="Pathfinding\Util\GraphGizmoHelper.cs" />
+    <Compile Include="Pathfinding\Util\GraphSnapshot.cs" />
+    <Compile Include="Pathfinding\Util\GraphTransform.cs" />
+    <Compile Include="Pathfinding\Util\Guid.cs" />
+    <Compile Include="Pathfinding\Util\IGraphSnapshot.cs" />
+    <Compile Include="Pathfinding\Util\IMovementPlane.cs" />
+    <Compile Include="Pathfinding\Util\ITransform.cs" />
+    <Compile Include="Pathfinding\Util\Memory.cs" />
+    <Compile Include="Pathfinding\Util\MeshUtility.cs" />
+    <Compile Include="Pathfinding\Util\MovementUtilities.cs" />
+    <Compile Include="Pathfinding\Util\MutableGraphTransform.cs" />
+    <Compile Include="Pathfinding\Util\NativeMovementPlane.cs" />
+    <Compile Include="Pathfinding\Util\NodeHasher.cs" />
+    <Compile Include="Pathfinding\Util\PathInterpolator.cs" />
+    <Compile Include="Pathfinding\Util\PathPartWithLinkInfo.cs" />
+    <Compile Include="Pathfinding\Util\PreserveAttribute.cs" />
+    <Compile Include="Pathfinding\Util\SimpleMovementPlane.cs" />
+    <Compile Include="Pathfinding\Util\ToPlaneMatrix.cs" />
+    <Compile Include="Pathfinding\Util\ToWorldMatrix.cs" />
+    <Compile Include="Pathfinding\Util\UnityCompatibility.cs" />
+    <Compile Include="Pathfinding\Vector2IntExtensions.cs" />
+    <Compile Include="Pathfinding\VectorMath.cs" />
+    <Compile Include="Pathfinding\WindowsStore\WindowsStoreCompatibility.cs" />
+    <Compile Include="Pathfinding\WorkItemProcessor.cs" />
+    <Compile Include="Pathfinding\XPath.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsUnmanagedAttribute.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="__JobReflectionRegistrationOutput__10569589673291187727.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
