@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{143D8B43-1104-457B-8A58-E25D367DBDC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Clipper2Lib</RootNamespace>
+    <AssemblyName>Clipper2Lib</AssemblyName>
+    <TargetFrameworkVersion>v1.1</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Collections">
+      <HintPath>..\..\為上傳DLL\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\為上傳DLL\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>..\..\為上傳DLL\System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>..\..\為上傳DLL\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\Active.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\Clipper.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\Clipper64.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\ClipperBase.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\ClipperD.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\ClipperEngine.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\ClipperLibException.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\ClipperOffset.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\ClipType.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\EndType.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\FillRule.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\GCArena.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\HorzJoin.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\HorzPosition.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\HorzSegment.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\InternalClipper.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\IntersectNode.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\JoinType.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\JoinWith.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\LocalMinima.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\LocMinSorter.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\Minkowski.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\OutPt.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\OutPt2.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\OutRec.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PathD.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PathsD.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PathType.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PipResult.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\Point64.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PointD.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PointInPolygonResult.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PolyPath64.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PolyPathBase.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PolyPathD.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PolyTree64.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\PolyTreeD.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\Rect64.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\RectClip64.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\RectClipLines64.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\RectD.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\ReuseableDataContainer64.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\SpanCompat.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\Vertex.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\VertexFlags.cs" />
+    <Compile Include="Pathfinding\Clipper2Lib\VertexPool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsUnmanagedAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
