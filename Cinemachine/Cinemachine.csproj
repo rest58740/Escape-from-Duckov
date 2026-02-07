@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8ECFC642-20BA-4D2F-A1C6-7544772E70EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Cinemachine</RootNamespace>
+    <AssemblyName>Cinemachine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\為上傳DLL\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\為上傳DLL\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\為上傳DLL\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\為上傳DLL\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>..\..\為上傳DLL\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\..\為上傳DLL\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\為上傳DLL\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AxisBase.cs" />
+    <Compile Include="AxisState.cs" />
+    <Compile Include="AxisStatePropertyAttribute.cs" />
+    <Compile Include="BlendSourceVirtualCamera.cs" />
+    <Compile Include="CameraState.cs" />
+    <Compile Include="Cinemachine3rdPersonAim.cs" />
+    <Compile Include="Cinemachine3rdPersonFollow.cs" />
+    <Compile Include="CinemachineBasicMultiChannelPerlin.cs" />
+    <Compile Include="CinemachineBlend.cs" />
+    <Compile Include="CinemachineBlendDefinition.cs" />
+    <Compile Include="CinemachineBlendDefinitionPropertyAttribute.cs" />
+    <Compile Include="CinemachineBlenderSettings.cs" />
+    <Compile Include="CinemachineBlendListCamera.cs" />
+    <Compile Include="CinemachineBrain.cs" />
+    <Compile Include="CinemachineCameraOffset.cs" />
+    <Compile Include="CinemachineClearShot.cs" />
+    <Compile Include="CinemachineCollider.cs" />
+    <Compile Include="CinemachineCollisionImpulseSource.cs" />
+    <Compile Include="CinemachineComponentBase.cs" />
+    <Compile Include="CinemachineComposer.cs" />
+    <Compile Include="CinemachineConfiner.cs" />
+    <Compile Include="CinemachineConfiner2D.cs" />
+    <Compile Include="CinemachineCore.cs" />
+    <Compile Include="CinemachineDollyCart.cs" />
+    <Compile Include="CinemachineEmbeddedAssetPropertyAttribute.cs" />
+    <Compile Include="CinemachineExtension.cs" />
+    <Compile Include="CinemachineExternalCamera.cs" />
+    <Compile Include="CinemachineFixedSignal.cs" />
+    <Compile Include="CinemachineFollowZoom.cs" />
+    <Compile Include="CinemachineFramingTransposer.cs" />
+    <Compile Include="CinemachineFreeLook.cs" />
+    <Compile Include="CinemachineGroupComposer.cs" />
+    <Compile Include="CinemachineHardLockToTarget.cs" />
+    <Compile Include="CinemachineHardLookAt.cs" />
+    <Compile Include="CinemachineImpulseChannelPropertyAttribute.cs" />
+    <Compile Include="CinemachineImpulseDefinition.cs" />
+    <Compile Include="CinemachineImpulseDefinitionPropertyAttribute.cs" />
+    <Compile Include="CinemachineImpulseEnvelopePropertyAttribute.cs" />
+    <Compile Include="CinemachineImpulseListener.cs" />
+    <Compile Include="CinemachineImpulseManager.cs" />
+    <Compile Include="CinemachineImpulseSource.cs" />
+    <Compile Include="CinemachineIndependentImpulseListener.cs" />
+    <Compile Include="CinemachineInputAxisDriver.cs" />
+    <Compile Include="CinemachineInputProvider.cs" />
+    <Compile Include="CinemachineMixer.cs" />
+    <Compile Include="CinemachineMixingCamera.cs" />
+    <Compile Include="CinemachineOrbitalTransposer.cs" />
+    <Compile Include="CinemachinePath.cs" />
+    <Compile Include="CinemachinePathBase.cs" />
+    <Compile Include="CinemachinePipeline.cs" />
+    <Compile Include="CinemachinePixelPerfect.cs" />
+    <Compile Include="CinemachinePOV.cs" />
+    <Compile Include="CinemachineRecomposer.cs" />
+    <Compile Include="CinemachineSameAsFollowTarget.cs" />
+    <Compile Include="CinemachineShot.cs" />
+    <Compile Include="CinemachineShotPlayable.cs" />
+    <Compile Include="CinemachineSmoothPath.cs" />
+    <Compile Include="CinemachineStateDrivenCamera.cs" />
+    <Compile Include="CinemachineStoryboard.cs" />
+    <Compile Include="CinemachineTargetGroup.cs" />
+    <Compile Include="CinemachineTouchInputMapper.cs" />
+    <Compile Include="CinemachineTrack.cs" />
+    <Compile Include="CinemachineTrackedDolly.cs" />
+    <Compile Include="CinemachineTransposer.cs" />
+    <Compile Include="CinemachineTriggerAction.cs" />
+    <Compile Include="CinemachineVirtualCamera.cs" />
+    <Compile Include="CinemachineVirtualCameraBase.cs" />
+    <Compile Include="ClipperLib.cs" />
+    <Compile Include="ConfinerOven.cs" />
+    <Compile Include="Documentation.cs" />
+    <Compile Include="DocumentationSortingAttribute.cs" />
+    <Compile Include="GroupWeightManipulator.cs" />
+    <Compile Include="ICameraOverrideStack.cs" />
+    <Compile Include="ICinemachineCamera.cs" />
+    <Compile Include="ICinemachineTargetGroup.cs" />
+    <Compile Include="ISignalSource6D.cs" />
+    <Compile Include="LensSettings.cs" />
+    <Compile Include="LensSettingsPropertyAttribute.cs" />
+    <Compile Include="NoiseSettings.cs" />
+    <Compile Include="NoiseSettingsPropertyAttribute.cs" />
+    <Compile Include="NoSaveDuringPlayAttribute.cs" />
+    <Compile Include="OrbitalTransposerHeadingPropertyAttribute.cs" />
+    <Compile Include="PostFX\CinemachinePostProcessing.cs" />
+    <Compile Include="PostFX\CinemachineVolumeSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuntimeUtility.cs" />
+    <Compile Include="SaveDuringPlayAttribute.cs" />
+    <Compile Include="SignalSourceAsset.cs" />
+    <Compile Include="StaticPointVirtualCamera.cs" />
+    <Compile Include="TagFieldAttribute.cs" />
+    <Compile Include="TargetPositionCache.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="UpdateTracker.cs" />
+    <Compile Include="Utility\CinemachineDebug.cs" />
+    <Compile Include="Utility\Damper.cs" />
+    <Compile Include="Utility\GaussianWindow1d.cs" />
+    <Compile Include="Utility\GaussianWindow1D_CameraRotation.cs" />
+    <Compile Include="Utility\GaussianWindow1D_Quaternion.cs" />
+    <Compile Include="Utility\GaussianWindow1D_Vector3.cs" />
+    <Compile Include="Utility\HeadingTracker.cs" />
+    <Compile Include="Utility\PositionPredictor.cs" />
+    <Compile Include="Utility\SplineHelpers.cs" />
+    <Compile Include="Utility\UnityQuaternionExtensions.cs" />
+    <Compile Include="Utility\UnityRectExtensions.cs" />
+    <Compile Include="Utility\UnityVectorExtensions.cs" />
+    <Compile Include="VcamTargetPropertyAttribute.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
