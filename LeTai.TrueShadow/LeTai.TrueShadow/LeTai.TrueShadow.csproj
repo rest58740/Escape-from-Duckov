@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AA3D9F0-0718-43BE-995C-F2502A18AA92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LeTai</RootNamespace>
+    <AssemblyName>LeTai.TrueShadow</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\為上傳DLL\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\為上傳DLL\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\為上傳DLL\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\為上傳DLL\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Effects\BlurConfig.cs" />
+    <Compile Include="Effects\IBlurAlgorithm.cs" />
+    <Compile Include="Effects\ScalableBlur.cs" />
+    <Compile Include="Effects\ScalableBlurConfig.cs" />
+    <Compile Include="Effects\ShaderProperties.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="HashUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShaderId.cs" />
+    <Compile Include="TrueShadow\AnimatedBiStateButton.cs" />
+    <Compile Include="TrueShadow\BlendMode.cs" />
+    <Compile Include="TrueShadow\BlendModeExtensions.cs" />
+    <Compile Include="TrueShadow\ChangeTracker.cs" />
+    <Compile Include="TrueShadow\ColorBleedMode.cs" />
+    <Compile Include="TrueShadow\DisableShadowCache.cs" />
+    <Compile Include="TrueShadow\IChangeTracker.cs" />
+    <Compile Include="TrueShadow\IndexedSet.cs" />
+    <Compile Include="TrueShadow\InsetOnPress.cs" />
+    <Compile Include="TrueShadow\InsetToggleAttribute.cs" />
+    <Compile Include="TrueShadow\InteractiveShadow.cs" />
+    <Compile Include="TrueShadow\KnobAttribute.cs" />
+    <Compile Include="TrueShadow\Math.cs" />
+    <Compile Include="TrueShadow\PluginInterfaces\ITrueShadowCasterClearColorProvider.cs" />
+    <Compile Include="TrueShadow\PluginInterfaces\ITrueShadowCasterMaterialPropertiesModifier.cs" />
+    <Compile Include="TrueShadow\PluginInterfaces\ITrueShadowCasterMaterialProvider.cs" />
+    <Compile Include="TrueShadow\PluginInterfaces\ITrueShadowCasterMeshModifier.cs" />
+    <Compile Include="TrueShadow\PluginInterfaces\ITrueShadowCustomHashProvider.cs" />
+    <Compile Include="TrueShadow\PluginInterfaces\ITrueShadowRendererMaterialModifier.cs" />
+    <Compile Include="TrueShadow\PluginInterfaces\ITrueShadowRendererMaterialProvider.cs" />
+    <Compile Include="TrueShadow\PluginInterfaces\ITrueShadowRendererMeshModifier.cs" />
+    <Compile Include="TrueShadow\ProjectSettings.cs" />
+    <Compile Include="TrueShadow\QuickPreset.cs" />
+    <Compile Include="TrueShadow\ShadowContainer.cs" />
+    <Compile Include="TrueShadow\ShadowFactory.cs" />
+    <Compile Include="TrueShadow\ShadowMaterial.cs" />
+    <Compile Include="TrueShadow\ShadowRenderer.cs" />
+    <Compile Include="TrueShadow\ShadowSettingSnapshot.cs" />
+    <Compile Include="TrueShadow\ShadowSorter.cs" />
+    <Compile Include="TrueShadow\Shims.cs" />
+    <Compile Include="TrueShadow\SpreadSliderAttribute.cs" />
+    <Compile Include="TrueShadow\ToggleButtonsAttribute.cs" />
+    <Compile Include="TrueShadow\TrueShadow.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
