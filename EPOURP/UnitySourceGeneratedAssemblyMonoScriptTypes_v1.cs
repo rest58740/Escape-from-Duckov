@@ -1,0 +1,250 @@
+﻿using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+// Token: 0x02000002 RID: 2
+[CompilerGenerated]
+[EditorBrowsable(EditorBrowsableState.Never)]
+[GeneratedCode("Unity.MonoScriptGenerator.MonoScriptInfoGenerator", null)]
+internal class UnitySourceGeneratedAssemblyMonoScriptTypes_v1
+{
+	// Token: 0x06000001 RID: 1 RVA: 0x00002050 File Offset: 0x00000250
+	[MethodImpl(MethodImplOptions.AggressiveInlining)]
+	private static UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData Get()
+	{
+		UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData result = default(UnitySourceGeneratedAssemblyMonoScriptTypes_v1.MonoScriptData);
+		result.FilePathsData = new byte[]
+		{
+			0,
+			0,
+			0,
+			3,
+			0,
+			0,
+			0,
+			80,
+			92,
+			65,
+			115,
+			115,
+			101,
+			116,
+			115,
+			92,
+			80,
+			108,
+			117,
+			103,
+			105,
+			110,
+			115,
+			92,
+			69,
+			97,
+			115,
+			121,
+			32,
+			112,
+			101,
+			114,
+			102,
+			111,
+			114,
+			109,
+			97,
+			110,
+			116,
+			32,
+			111,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			92,
+			83,
+			99,
+			114,
+			105,
+			112,
+			116,
+			115,
+			92,
+			85,
+			82,
+			80,
+			32,
+			115,
+			117,
+			112,
+			112,
+			111,
+			114,
+			116,
+			92,
+			85,
+			82,
+			80,
+			79,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			70,
+			101,
+			97,
+			116,
+			117,
+			114,
+			101,
+			46,
+			99,
+			115
+		};
+		result.TypesData = new byte[]
+		{
+			0,
+			0,
+			0,
+			0,
+			28,
+			69,
+			80,
+			79,
+			79,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			124,
+			85,
+			82,
+			80,
+			79,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			70,
+			101,
+			97,
+			116,
+			117,
+			114,
+			101,
+			0,
+			0,
+			0,
+			0,
+			39,
+			69,
+			80,
+			79,
+			79,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			46,
+			85,
+			82,
+			80,
+			79,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			70,
+			101,
+			97,
+			116,
+			117,
+			114,
+			101,
+			124,
+			83,
+			82,
+			80,
+			79,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			0,
+			0,
+			0,
+			0,
+			33,
+			69,
+			80,
+			79,
+			79,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			46,
+			85,
+			82,
+			80,
+			79,
+			117,
+			116,
+			108,
+			105,
+			110,
+			101,
+			70,
+			101,
+			97,
+			116,
+			117,
+			114,
+			101,
+			124,
+			80,
+			111,
+			111,
+			108
+		};
+		result.TotalFiles = 1;
+		result.TotalTypes = 3;
+		result.IsEditorOnly = false;
+		return result;
+	}
+
+	// Token: 0x02000005 RID: 5
+	private struct MonoScriptData
+	{
+		// Token: 0x04000006 RID: 6
+		public byte[] FilePathsData;
+
+		// Token: 0x04000007 RID: 7
+		public byte[] TypesData;
+
+		// Token: 0x04000008 RID: 8
+		public int TotalTypes;
+
+		// Token: 0x04000009 RID: 9
+		public int TotalFiles;
+
+		// Token: 0x0400000A RID: 10
+		public bool IsEditorOnly;
+	}
+}
