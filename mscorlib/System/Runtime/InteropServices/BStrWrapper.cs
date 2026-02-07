@@ -1,0 +1,33 @@
+﻿using System;
+
+namespace System.Runtime.InteropServices
+{
+	// Token: 0x020006D2 RID: 1746
+	public sealed class BStrWrapper
+	{
+		// Token: 0x06004028 RID: 16424 RVA: 0x000E0C1F File Offset: 0x000DEE1F
+		public BStrWrapper(string value)
+		{
+			this.m_WrappedObject = value;
+		}
+
+		// Token: 0x06004029 RID: 16425 RVA: 0x000E0C2E File Offset: 0x000DEE2E
+		public BStrWrapper(object value)
+		{
+			this.m_WrappedObject = (string)value;
+		}
+
+		// Token: 0x170009C3 RID: 2499
+		// (get) Token: 0x0600402A RID: 16426 RVA: 0x000E0C42 File Offset: 0x000DEE42
+		public string WrappedObject
+		{
+			get
+			{
+				return this.m_WrappedObject;
+			}
+		}
+
+		// Token: 0x04002A17 RID: 10775
+		private string m_WrappedObject;
+	}
+}

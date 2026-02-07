@@ -1,0 +1,50 @@
+﻿using System;
+using System.Reflection;
+using System.Security;
+
+namespace System.Runtime.InteropServices
+{
+	// Token: 0x02000708 RID: 1800
+	[ComVisible(true)]
+	[AttributeUsage(AttributeTargets.Field, Inherited = false)]
+	public sealed class FieldOffsetAttribute : Attribute
+	{
+		// Token: 0x060040A9 RID: 16553 RVA: 0x000E14E0 File Offset: 0x000DF6E0
+		[SecurityCritical]
+		internal static Attribute GetCustomAttribute(RuntimeFieldInfo field)
+		{
+			int fieldOffset;
+			if (field.DeclaringType != null && (fieldOffset = field.GetFieldOffset()) >= 0)
+			{
+				return new FieldOffsetAttribute(fieldOffset);
+			}
+			return null;
+		}
+
+		// Token: 0x060040AA RID: 16554 RVA: 0x000E150E File Offset: 0x000DF70E
+		[SecurityCritical]
+		internal static bool IsDefined(RuntimeFieldInfo field)
+		{
+			return FieldOffsetAttribute.GetCustomAttribute(field) != null;
+		}
+
+		// Token: 0x060040AB RID: 16555 RVA: 0x000E1519 File Offset: 0x000DF719
+		public FieldOffsetAttribute(int offset)
+		{
+			this._val = offset;
+		}
+
+		// Token: 0x170009DD RID: 2525
+		// (get) Token: 0x060040AC RID: 16556 RVA: 0x000E1528 File Offset: 0x000DF728
+		public int Value
+		{
+			get
+			{
+				return this._val;
+			}
+		}
+
+		// Token: 0x04002ADF RID: 10975
+		internal int _val;
+	}
+}
