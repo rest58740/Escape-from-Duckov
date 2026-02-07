@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AFC61E9-6A9C-4873-9750-C1D2B436AC5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Eflatun.SceneReference</RootNamespace>
+    <AssemblyName>Eflatun.SceneReference</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\為上傳DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\為上傳DLL\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\為上傳DLL\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>..\..\為上傳DLL\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\為上傳DLL\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColoringBehaviour.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Exceptions\AddressablesSupportDisabledException.cs" />
+    <Compile Include="Exceptions\AddressNotFoundException.cs" />
+    <Compile Include="Exceptions\AddressNotUniqueException.cs" />
+    <Compile Include="Exceptions\EmptySceneReferenceException.cs" />
+    <Compile Include="Exceptions\InvalidSceneReferenceException.cs" />
+    <Compile Include="Exceptions\SceneNotAddressableException.cs" />
+    <Compile Include="Exceptions\SceneReferenceCreationException.cs" />
+    <Compile Include="Exceptions\SceneReferenceException.cs" />
+    <Compile Include="Exceptions\SceneReferenceInternalException.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="Paths.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SceneGuidToAddressMapProvider.cs" />
+    <Compile Include="SceneGuidToPathMapProvider.cs" />
+    <Compile Include="SceneReference.cs" />
+    <Compile Include="SceneReferenceOptionsAttribute.cs" />
+    <Compile Include="SceneReferenceState.cs" />
+    <Compile Include="SceneReferenceUnsafeReason.cs" />
+    <Compile Include="ToolboxBehaviour.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="Utility\ConvertedPath.cs" />
+    <Compile Include="Utility\Utils.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
